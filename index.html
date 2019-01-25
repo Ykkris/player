@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Player One not ready</title>
+
+   <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/player.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="conteneur">
+    <section class="infoMusique">
+      <h1 class="titreMusique">Notre titre</h1>
+      <div id="imageAlbum">
+      <h2 class="artiste">Artiste</h2>
+      <h2 class="album">Album</h2>
+      <div class="playlistEnCours"></div>
+    </section>
+
+    <!-- Pour le CSS = [name = "nom"] -->
+    <button name="precedent" class="icon-prec"></button>
+    <button name="playPause" class="icon-play"></button>
+    <button name="suivant" class="icon-suiv"></button>
+    <button type="repeat" class="icon-repeat"></button>
+    <button type="random" class="icon-shuffle"></button>
+
+    <!--Volume-->
+    <button type="volume" class="icon-volume-mute"></button>
+    <div class="regletteVolume"><div></div></div>
+
+    <!--Durée-->
+    <div class="duree"><div></div></div>
+    <!-- Menu -->
+    <nav id="menu">
+      <ul>
+        <li>Gestion biblio</li>
+        <li>Gestion artiste</li>
+        <li>Gestion titre</li>
+        <li>Gestion album</li>
+        <li>Playlist</li>
+      </ul>
+    </nav>
+  </div>
+</body>
+</html>

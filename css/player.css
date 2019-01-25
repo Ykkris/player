@@ -1,0 +1,42 @@
+* {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-weight: 600;
+  color: blue;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+.conteneur {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+  background-color: grey;
+  border-radius: 10%;
+}
+
+.infoMusique {
+  grid-column: 1 / 13;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+}
+
+.infoMusique h1 {
+  grid-column: 6 / 9;
+}
+
+button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.icon-play {
+  font-size: 15px;
+}
