@@ -4,46 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Player One not ready</title>
-
-   <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link rel="stylesheet" href="css/player.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Player</title>
 </head>
 <body>
-  <div class="conteneur">
-    <section class="infoMusique">
-      <h1 class="titreMusique">Notre titre</h1>
-      <div id="imageAlbum">
-      <h2 class="artiste">Artiste</h2>
-      <h2 class="album">Album</h2>
-      <div class="playlistEnCours"></div>
-    </section>
-
-    <!-- Pour le CSS = [name = "nom"] -->
-    <button name="precedent" class="icon-prec"></button>
-    <button name="playPause" class="icon-play"></button>
-    <button name="suivant" class="icon-suiv"></button>
-    <button type="repeat" class="icon-repeat"></button>
-    <button type="random" class="icon-shuffle"></button>
-
-    <!--Volume-->
-    <button type="volume" class="icon-volume-mute"></button>
-    <div class="regletteVolume"><div></div></div>
-
-    <!--Durée-->
-    <div class="duree"><div></div></div>
-    <!-- Menu -->
-    <nav id="menu">
-      <ul>
-        <li>Gestion biblio</li>
-        <li>Gestion artiste</li>
-        <li>Gestion titre</li>
-        <li>Gestion album</li>
-        <li>Playlist</li>
-      </ul>
-    </nav>
+  <div id="lePlayer">
+  <div class="album">
+    <div class="coeur"><i class="fas fa-heart"></i></div>
   </div>
+  <div class="information">
+    <div class="progress-bar">
+      <div class="temps--actuel">1:25</div>
+      <div class="temps--total">-5:37</div>
+      <div class="remplis"></div>
+    </div>
+    <div class="en-cours">
+      <h2 class="titre-music">Instant Crush</h2>
+      <h3 class="artiste">Daft Punk</h3>
+    </div>
+    <div class="controles">
+      <div class="option"><i class="fas fa-bars"></i></div>
+      <div class="volume"><i class="fas fa-volume-up"></i></div>
+      <div class="prec"><i class="fas fa-backward"></i></div>
+      <div class="play"><i class="fas fa-play"></i></div>
+      <div class="pause"><i class="fas fa-pause"></i></div>
+      <div class="suiv"><i class="fas fa-forward"></i></div>
+      <div class="random"><i class="fas fa-random"></i></div>
+      <div class="ajouter"><i class="fas fa-plus"></i></div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+<script type="text/javascript" src="player.js"></script>
 </body>
 </html>

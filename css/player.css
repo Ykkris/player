@@ -1,42 +1,156 @@
-* {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-}
-
-h1 {
-  font-weight: 600;
-  color: blue;
-}
-
-h2 {
-  font-weight: 500;
-}
-
-.conteneur {
+html {
+  min-height: 100%;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 20px;
-  background-color: grey;
-  border-radius: 10%;
 }
 
-.infoMusique {
-  grid-column: 1 / 13;
+body {
+  background: linear-gradient(to bottom left, #b2c2cf 10%, #8891a8 80%);
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 20px;
+  overflow: hidden;
 }
 
-.infoMusique h1 {
-  grid-column: 6 / 9;
+#lePlayer {
+  background: #FFFFFF;
+  position: relative;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px rgba(54, 79, 60, 0.4);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+#lePlayer:hover {
+  transform: scale(1.05);
 }
 
-button {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
+.album {
+  background: linear-gradient(rgba(54, 67, 79, 0.25), rgba(73, 82, 101, 0.55)), url("http://blogsv2.qobuz.com/qobuz-blog-fr/wp-content/uploads/sites/4/2013/05/0000020130520_600.jpg");
+  background-repeat: no-repeat;
+  background-size: 300px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  position: absolute;
 }
 
-.icon-play {
-  font-size: 15px;
+.coeur {
+  position: absolute;
+  right: 0;
+  color: #FFFFFF;
+  margin: 10px;
+  transition: all .4s ease;
+}
+
+.cliquer {
+  color: red;
+  transform: scale(1.2);
+  transition: all .4s ease;
+}
+
+.information {
+  height: 115px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.85);
+  transform: translateY(35px);
+  transition: all .5s ease-in-out;
+}
+
+.monte {
+  transform: translateY(0px);
+}
+
+.progress-bar {
+  height: 5px;
+  width: 73%;
+  margin: 6% auto;
+  background: #c2cdd9;
+  border-radius: 10px;
+  font-family: "Raleway", sans-serif;
+}
+
+.remplis {
+  background-color: #888ca8;
+  width: 35%;
+  height: 0.3rem;
+  border-radius: 2px;
+}
+
+.temps--actuel, .temps--total {
+  color: #363e4f;
+  font-size: 10px;
+  position: absolute;
+  margin-top: -2px;
+}
+
+.temps--actuel {
+  left: 15px;
+}
+
+.temps--total {
+  right: 15px;
+}
+
+.en-cours {
+  text-align: center;
+  margin-top: -3px;
+}
+
+.titre-music, .artiste {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.titre-music {
+  font-size: .8em;
+  letter-spacing: 3px;
+  color: #36404f;
+}
+
+.artiste {
+  font-size: .6em;
+  letter-spacing: 1.5px;
+  color: #55607c;
+  margin-top: 5px;
+}
+
+.controles {
+  display: flex;
+  align-items: center;
+  font-size: .8em;
+  justify-content: center;
+  color: #8899a8;
+}
+.controles .play, .controles .pause {
+  margin: 15px 25px;
+  color: #6c8194;
+}
+.controles .option {
+  left: 10px;
+  position: absolute;
+  font-size: .8em;
+}
+.controles .ajouter {
+  right: 10px;
+  position: absolute;
+  font-size: .8em;
+}
+.controles .volume {
+  margin-right: 30px;
+  font-size: .8em;
+}
+.controles .random {
+  margin-left: 30px;
+  font-size: .8em;
+}
+
+.play, .pause, .suiv, .prec, .option, .ajouter, .volume, .random {
+  transition: all .5s ease;
+}
+.play:hover, .pause:hover, .suiv:hover, .prec:hover, .option:hover, .ajouter:hover, .volume:hover, .random:hover {
+  color: #555e7c;
 }
