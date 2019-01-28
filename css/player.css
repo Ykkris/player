@@ -6,16 +6,16 @@ html {
 body {
   background: linear-gradient(to bottom left, #b2c2cf 10%, #8891a8 80%);
   display: grid;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 #lePlayer {
   background: #FFFFFF;
   position: relative;
   margin: auto;
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
+  width: 25vw;
+  height: 51vh;
+  /*overflow: hidden;*/
   border-radius: 5px;
   box-shadow: 5px 5px 15px rgba(54, 79, 60, 0.4);
   -webkit-transition: all .5s ease-in-out;
@@ -26,11 +26,11 @@ body {
 }
 
 .album {
-  background: linear-gradient(rgba(54, 67, 79, 0.25), rgba(73, 82, 101, 0.55)), url("http://blogsv2.qobuz.com/qobuz-blog-fr/wp-content/uploads/sites/4/2013/05/0000020130520_600.jpg");
+  background: linear-gradient(rgba(54, 67, 79, 0.25), rgba(73, 82, 101, 0.55)), url("../images/no-cover.png");
   background-repeat: no-repeat;
-  background-size: 300px;
-  width: 100%;
-  height: 100%;
+  background-size: contain;
+  width: 25vw;
+  height: 51vh;
   border-radius: 5px;
   position: absolute;
 }
@@ -50,12 +50,12 @@ body {
 }
 
 .information {
-  height: 115px;
+  height: 23%;
   width: 100%;
   position: absolute;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.85);
-  transform: translateY(35px);
+  background: rgb(255, 255, 255);
+  /*transform: translateY(0);*/
   transition: all .5s ease-in-out;
 }
 
@@ -66,7 +66,7 @@ body {
 .progress-bar {
   height: 5px;
   width: 73%;
-  margin: 6% auto;
+  margin: 5% auto;
   background: #c2cdd9;
   border-radius: 10px;
   font-family: "Raleway", sans-serif;
@@ -74,7 +74,7 @@ body {
 
 .remplis {
   background-color: #888ca8;
-  width: 35%;
+  width: 0%;
   height: 0.3rem;
   border-radius: 2px;
 }
@@ -96,7 +96,7 @@ body {
 
 .en-cours {
   text-align: center;
-  margin-top: -3px;
+  /*margin-top: -3px;*/
 }
 
 .titre-music, .artiste {
@@ -121,9 +121,11 @@ body {
 .controles {
   display: flex;
   align-items: center;
-  font-size: .8em;
   justify-content: center;
+  text-align: center;
+  font-size: .8em;
   color: #8899a8;
+  margin-bottom: 10px;
 }
 .controles .play, .controles .pause {
   margin: 15px 25px;
