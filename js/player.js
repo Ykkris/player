@@ -182,8 +182,21 @@ function loadFile() {
 function showTags(url) {
   var tags = ID3.getAllTags(url);
   console.log(tags);
-  document.querySelector('.titre-music').textContent = tags.title || "";
-  document.querySelector('.artiste').textContent = tags.artist || "";
+  if(tags.title){
+    document.querySelector('.titre-music').textContent = tags.title;
+  } else {
+    let regex = /^Musiques\/|.mp3$/gm;
+    let nomMusique = url.replace(regex, '');
+    console.log(nomMusique);
+    $(".titre-music").html(nomMusique);
+  }
+
+  if(tags.artist) {
+    document.querySelector('.artiste').textContent = tags.artist;
+  } else {
+    $(".artiste").html("Artist unknown");
+  }
+
   var image = tags.picture;
   if (image) {
     var base64String = "";
